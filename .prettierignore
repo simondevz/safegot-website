@@ -6,3 +6,4 @@ package-lock.json
 public/**/*.svg
 public/**/*.png
 public/**/*.ico
+public/fonts/**

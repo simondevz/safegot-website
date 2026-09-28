@@ -1,5 +1,179 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Arial Local";
+  src: url("/fonts/arial/ARIALLGT.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Local";
+  src: url("/fonts/arial/ARIAL.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Local";
+  src: url("/fonts/arial/ArialMdm.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Local";
+  src: url("/fonts/arial/ARIALBD.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial Local";
+  src: url("/fonts/arial/ARIBLK.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-ExtraLight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-ExtraBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/fonts/Inter-Full-Version/Web Fonts/Inter/Inter-Black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-ExtraLight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-ExtraBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Local";
+  src: url("/fonts/Nunito-Full-Version/Web Fonts/Nunito/Nunito-Black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-arial: "Arial Local", Arial, sans-serif;
+  --font-inter: "Inter Local", sans-serif;
+  --font-nunito: "Nunito Local", sans-serif;
+}
+
 @theme {
   --breakpoint-mobile: 35rem;
   --breakpoint-tablet: 56.25rem;
@@ -51,7 +225,16 @@
     margin: 0;
     background: radial-gradient(circle at 50% 20%, var(--green-soft), transparent 34rem), var(--bg);
     color: var(--ink);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-inter);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-nunito);
   }
 
   a {

@@ -12,7 +12,7 @@ export function RoleFlowCard({ id, role, title, copy, steps: flowSteps }: RoleFl
       className="scroll-mt-[120px] rounded-[18px] border border-[var(--border)] bg-[linear-gradient(140deg,var(--surface-soft),color-mix(in_srgb,var(--surface)_65%,transparent))] p-[26px] shadow-[var(--shadow)] backdrop-blur-xl"
       id={id}
     >
-      <span className="font-mono text-xs uppercase text-[var(--green)]">{role}</span>
+      <span className="font-inter text-xs uppercase text-[var(--green)]">{role}</span>
       <h3 className="my-[13px] mb-2.5 text-[22px] tracking-[-0.04em]">{title}</h3>
       <p className="min-h-[68px] text-sm leading-[1.55] text-[var(--muted)]">{copy}</p>
       <ol className="mt-6 grid list-none gap-3 border-t border-[var(--border)] pt-5">
