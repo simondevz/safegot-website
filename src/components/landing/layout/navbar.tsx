@@ -23,7 +23,7 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-3.5 max-tablet:hidden">
           <ThemeToggle />
-          <Button>Join the waitlist</Button>
+          <Button href="#waitlist">Join the waitlist</Button>
         </div>
         <MobileNav />
       </div>

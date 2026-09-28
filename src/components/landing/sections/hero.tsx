@@ -9,18 +9,21 @@ const stats: Stat[] = [
 ];
 export function Hero() {
   return (
-    <section className="grid min-h-[580px] grid-cols-[minmax(0,1fr)_minmax(420px,0.92fr)] items-center gap-[clamp(50px,8vw,150px)] max-tablet:grid-cols-1 max-tablet:gap-[55px]">
+    <section className="flex justify-between h-fit">
       <div className="max-w-[620px]">
-        <h1 className="mb-5 mt-[25px] text-[clamp(3.3rem,6vw,5.2rem)] leading-[0.98] tracking-[-0.07em] max-mobile:text-[3.35rem]">
-          The trust layer for <em>African commerce.</em>
+        <h1 className="mb-5 mt-[25px] text-[64px] leading-[63px] font-bold tracking-[-0.07em] max-mobile:text-[3.35rem]">
+          The trust layer for <br />
+          <span className="bg-[linear-gradient(90deg,#6FFFD1_20.67%,#12B76A_100%)] bg-clip-text text-transparent">
+            African commerce.
+          </span>
         </h1>
-        <p className="max-w-[600px] text-lg leading-[1.55] text-[var(--muted)] max-mobile:text-base">
+        <p className="max-w-[600px] text-[20px] leading-[28.9px] text-[var(--muted)] max-mobile:text-base">
           Safegot holds payment in trust until delivery is confirmed so buyers stop sending money on
           faith, and sellers stop shipping on hope. Built for the way Africa actually sells: on
           WhatsApp, Instagram, and Marketplace.
         </p>
-        <div className="my-[30px] mb-[15px] flex gap-3.5 max-mobile:flex-col max-mobile:items-stretch [&>a]:max-mobile:w-full">
-          <Button>Join the waitlist</Button>
+        <div className="my-[18px] flex gap-3.5 max-mobile:flex-col max-mobile:items-stretch [&>a]:max-mobile:w-full">
+          <Button href="#waitlist">Join the waitlist</Button>
           <Button href="#how-it-works" secondary>
             See how it works
           </Button>
@@ -30,7 +33,7 @@ export function Hero() {
         </small>
         <StatStrip items={stats} />
       </div>
-      <div className="w-full max-w-[500px] justify-self-end">
+      <div className="flex min-h-[580px] mb-[18px] w-full max-w-[500px] items-center self-stretch justify-self-end max-tablet:min-h-0 h-full">
         <EscrowDashboard />
       </div>
     </section>

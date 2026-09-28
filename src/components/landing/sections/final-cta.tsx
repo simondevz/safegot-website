@@ -14,7 +14,7 @@ export function FinalCta() {
       <p className="mb-7 text-[var(--muted)]">
         Free during early access · No app download required
       </p>
-      <Button>Join the waitlist</Button>
+      <Button href="#waitlist">Join the waitlist</Button>
     </section>
   );
 }
