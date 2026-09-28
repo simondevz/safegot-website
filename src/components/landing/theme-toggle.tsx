@@ -22,5 +22,14 @@ export function ThemeToggle() {
     window.localStorage.setItem("safegot-theme", nextTheme);
   }
 
-  return <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}><span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span></button>;
+  return (
+    <button
+      className="grid h-[42px] w-[42px] place-items-center rounded-full border border-[var(--border)] bg-transparent text-[var(--ink)]"
+      type="button"
+      onClick={toggleTheme}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+    >
+      <span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span>
+    </button>
+  );
 }
