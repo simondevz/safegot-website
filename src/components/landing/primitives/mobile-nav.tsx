@@ -14,7 +14,7 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative hidden max-[900px]:block">
+    <div className="relative hidden max-tablet:block">
       <button
         className="grid gap-1.5 border-0 bg-transparent p-2 text-[var(--ink)]"
         type="button"
