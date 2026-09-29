@@ -1,20 +1,18 @@
 import { Button } from "../primitives/button";
+import { DecoratedCard } from "../primitives/decorated-card";
+
 export function FinalCta() {
   return (
-    <section
-      className="mx-auto max-w-[1000px] scroll-mt-[120px] rounded-[28px] border border-[var(--border)] bg-[linear-gradient(140deg,var(--surface-soft),color-mix(in_srgb,var(--surface)_65%,transparent))] px-10 py-[75px] text-center shadow-[var(--shadow)] backdrop-blur-xl max-mobile:px-[22px] max-mobile:py-[55px]"
-      id="waitlist"
-    >
-      <span className="mb-[17px] inline-flex items-center gap-[9px] align-middle font-nunito text-base font-normal leading-[18px] tracking-[1.68px] text-[var(--green)] uppercase before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#12B76A] before:shadow-[0_0_8px_0_#12B76A] before:content-['']">
-        Start with trust
-      </span>
-      <h2 className="mx-auto mb-[15px] max-w-[680px] text-[clamp(2.5rem,5vw,4.5rem)] leading-[0.98] tracking-[-0.08em]">
-        Join 10,000+ people building safer commerce
-      </h2>
-      <p className="mb-7 text-[var(--muted)]">
-        Free during early access · No app download required
-      </p>
-      <Button href="#waitlist">Join the waitlist</Button>
+    <section className="mx-auto w-full max-w-[1116px] scroll-mt-[120px]" id="waitlist">
+      <DecoratedCard className="flex h-[214px] w-full flex-col items-center justify-center gap-[10px] rounded-[14px] px-9 pb-9 pt-[35px] max-mobile:h-auto max-mobile:px-[22px]">
+        <h2 className="flex h-[30px] items-center text-center font-nunito text-[30px] leading-[29px] font-bold tracking-[-0.26px] text-white">
+          Join 10,000+ people building safer commerce
+        </h2>
+        <p className="flex h-[39px] max-w-[640px] items-center pb-3 text-center font-inter text-[20px] leading-[26px] font-normal text-[#8FA3C4]">
+          Free during early access · No app download required
+        </p>
+        <Button href="#waitlist">Join the waitlist</Button>
+      </DecoratedCard>
     </section>
   );
 }

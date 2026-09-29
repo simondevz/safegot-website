@@ -37,6 +37,7 @@ export function CommonQuestions() {
   return (
     <section className="mx-auto max-w-[960px] scroll-mt-[120px]" id="faqs">
       <SectionHeading
+        align="center"
         eyebrow="Common questions"
         title="Frequently asked questions"
         copy="Comparing the stress of traditional social commerce to the confidence of a Safegot-protected sale."

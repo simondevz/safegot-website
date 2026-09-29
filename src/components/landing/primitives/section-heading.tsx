@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   align?: "left" | "center";
   className?: string;
   marginBottom?: string;
+  copyColor?: string;
 };
 
 export function SectionHeading({
@@ -14,6 +15,7 @@ export function SectionHeading({
   align = "left",
   className = "",
   marginBottom = "mb-[52px]",
+  copyColor = "#8FA3C4",
 }: SectionHeadingProps) {
   const alignment = align === "center" ? "items-center text-center" : "items-start text-left";
 
@@ -26,7 +28,10 @@ export function SectionHeading({
         {title}
       </h2>
       {copy && (
-        <p className="max-w-[680px] align-middle font-inter text-[20px] leading-[26.4px] font-normal tracking-[0%] text-[#8FA3C4]">
+        <p
+          className="max-w-[680px] align-middle font-inter text-[20px] leading-[26.4px] font-normal tracking-[0%]"
+          style={{ color: copyColor }}
+        >
           {copy}
         </p>
       )}
