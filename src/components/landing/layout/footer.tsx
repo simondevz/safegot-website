@@ -1,28 +1,88 @@
 import { Logo } from "../primitives/logo";
+
+const productLinks = [
+  ["How it works", "#how-it-works"],
+  ["Why Safegot", "#advantage"],
+  ["FAQs", "#faqs"],
+  ["Join the waitlist", "#waitlist"],
+] as const;
+
+const legalLinks = [
+  ["Terms", "#terms"],
+  ["Privacy policy", "#privacy"],
+] as const;
+
+const resourceLinks = [
+  ["FAQs", "#faqs"],
+  ["Blog", "#blog"],
+] as const;
+
+function LinkGroup({
+  title,
+  links,
+}: {
+  title: string;
+  links: readonly (readonly [string, string])[];
+}) {
+  return (
+    <nav className="flex flex-col items-start gap-[15px]" aria-label="Footer links">
+      <span className="px-1 py-1 font-inter text-[16px] leading-[21px] font-medium text-white">
+        {title}
+      </span>
+      {links.map(([label, href]) => (
+        <a
+          className="px-1 py-1 font-inter text-[16px] leading-[21px] font-medium text-[#8FA3C4] hover:text-[var(--green)]"
+          href={href}
+          key={href}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+function ContactDetails() {
+  return (
+    <address className="ml-auto flex w-[250px] flex-col gap-[15px] pt-5 not-italic max-tablet:ml-0">
+      <span className="font-inter text-[16px] leading-[21px] font-medium text-white">Contact</span>
+      <a
+        className="font-inter text-[16px] leading-[21px] font-medium text-[#8FA3C4] hover:text-[var(--green)]"
+        href="mailto:team@safegot.com"
+      >
+        team@safegot.com
+      </a>
+      <a
+        className="font-inter text-[16px] leading-[21px] font-medium text-[#8FA3C4] hover:text-[var(--green)]"
+        href="tel:+2347053111596"
+      >
+        07053111596
+      </a>
+      <span className="font-inter text-[16px] leading-[21px] font-medium text-[#8FA3C4]">
+        No. 24, Bamidele Avi Street, Egbeda, Lagos State, Nigeria
+      </span>
+    </address>
+  );
+}
+
 export function Footer() {
   return (
-    <footer className="mx-auto grid max-w-[1383px] grid-cols-[1fr_auto_1fr] items-end gap-[35px] border-t border-[var(--border)] px-10 pb-[45px] pt-[34px] text-[var(--muted)] max-tablet:grid-cols-1 max-tablet:px-[22px] max-tablet:py-[30px]">
-      <div>
-        <Logo />
-        <p className="mt-[13px] text-xs">The trust layer for Africa&apos;s digital commerce.</p>
+    <footer className="w-full border-b border-[rgba(142,155,179,0.2)] bg-[#081B33] py-2.5">
+      <div className="mx-auto grid min-h-[280px] w-full max-w-[1383px] grid-cols-[245px_minmax(0,1fr)_250px] items-start gap-10 px-7 max-tablet:flex max-tablet:flex-wrap max-tablet:justify-between max-tablet:gap-10 max-tablet:px-[22px] max-mobile:flex-col max-mobile:items-start max-mobile:py-8">
+        <div className="flex h-[202px] w-[245px] flex-col gap-2.5 px-2.5 py-5 max-mobile:items-start">
+          <Logo />
+          <p className="flex h-[84px] w-[225px] items-center font-inter text-[16px] leading-[21px] font-medium text-[#8FA3C4]">
+            Safegot holds funds in trust until delivery is verified , the trust layer for Africa’s
+            digital commerce
+          </p>
+        </div>
+        <div className="flex justify-center gap-5 pt-5">
+          <LinkGroup links={productLinks} title="Product" />
+          <LinkGroup links={resourceLinks} title="Resources" />
+          <LinkGroup links={legalLinks} title="Legal" />
+        </div>
+        <ContactDetails />
       </div>
-      <div className="flex gap-[22px] text-xs max-tablet:flex-wrap">
-        <a className="hover:text-[var(--green)]" href="#how-it-works">
-          How it works
-        </a>
-        <a className="hover:text-[var(--green)]" href="#advantage">
-          Why Safegot
-        </a>
-        <a className="hover:text-[var(--green)]" href="#faqs">
-          FAQs
-        </a>
-        <a className="hover:text-[var(--green)]" href="#waitlist">
-          Join the waitlist
-        </a>
-      </div>
-      <small className="justify-self-end text-[11px] max-tablet:justify-self-start">
-        © 2026 Safegot. Built for safer commerce.
-      </small>
     </footer>
   );
 }
