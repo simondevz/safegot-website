@@ -2,7 +2,7 @@ import { ComparisonColumn } from "../primitives/comparison-column";
 import { SectionHeading } from "../primitives/section-heading";
 export function TrustContrast() {
   return (
-    <section className="mb-[170px] scroll-mt-[120px] max-tablet:mb-[120px]" id="advantage">
+    <section className="scroll-mt-[120px]" id="advantage">
       <SectionHeading
         eyebrow="Trust contrast"
         title="The Safegot trust advantage"

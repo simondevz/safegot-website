@@ -9,7 +9,7 @@ const stats: Stat[] = [
 ];
 export function Hero() {
   return (
-    <section className="flex justify-between h-fit">
+    <section className="flex h-fit justify-between">
       <div className="max-w-[620px]">
         <h1 className="mb-5 mt-[25px] text-[64px] leading-[63px] font-bold tracking-[-0.07em] max-mobile:text-[3.35rem]">
           The trust layer for <br />
@@ -33,7 +33,7 @@ export function Hero() {
         </small>
         <StatStrip items={stats} />
       </div>
-      <div className="flex min-h-[580px] mb-[18px] w-full max-w-[500px] items-center self-stretch justify-self-end max-tablet:min-h-0 h-full">
+      <div className="flex w-full max-w-[500px] items-center self-stretch justify-self-end max-tablet:min-h-0 h-full">
         <EscrowDashboard />
       </div>
     </section>

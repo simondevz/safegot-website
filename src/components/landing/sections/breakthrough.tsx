@@ -2,7 +2,7 @@ import { EscrowDashboard } from "../primitives/escrow-dashboard";
 import { SectionHeading } from "../primitives/section-heading";
 export function Breakthrough() {
   return (
-    <section className="mb-[170px] scroll-mt-[120px] max-tablet:mb-[120px]" id="about">
+    <section className="scroll-mt-[120px]" id="about">
       <SectionHeading
         eyebrow="The breakthrough"
         title="Meet Safegot"

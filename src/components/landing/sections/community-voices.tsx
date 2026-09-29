@@ -1,7 +1,7 @@
 import { SectionHeading } from "../primitives/section-heading";
 export function CommunityVoices() {
   return (
-    <section className="mx-auto mb-[170px] max-w-[940px] scroll-mt-[120px] max-tablet:mb-[120px]">
+    <section className="mx-auto max-w-[940px] scroll-mt-[120px]">
       <SectionHeading
         eyebrow="Community voices"
         title="People are already excited about safer online commerce"

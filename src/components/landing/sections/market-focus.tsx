@@ -1,7 +1,7 @@
 import { SectionHeading } from "../primitives/section-heading";
 export function MarketFocus() {
   return (
-    <section className="mb-[170px] scroll-mt-[120px] max-tablet:mb-[120px]">
+    <section className="scroll-mt-[120px]">
       <SectionHeading
         eyebrow="The market focus"
         title="The trust layer for Africa's digital commerce."

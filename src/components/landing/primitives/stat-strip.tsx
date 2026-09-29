@@ -6,7 +6,7 @@ type StatStripProps = {
 
 export function StatStrip({ items = [] }: StatStripProps) {
   return (
-    <div className="mt-[18px] mb-[150px] grid max-w-[560px] grid-cols-3 max-tablet:my-[75px] max-tablet:mb-[120px] max-mobile:grid-cols-1 max-mobile:gap-[22px]">
+    <div className="mt-[18px] grid max-w-[560px] grid-cols-3 max-tablet:my-[75px] max-tablet:mb-[120px] max-mobile:grid-cols-1 max-mobile:gap-[22px]">
       {items.map((stat) => (
         <div className="grid gap-[4px]" key={stat.label}>
           <span className="text-[34px] font-bold font-nunito text-[var(--green)]">

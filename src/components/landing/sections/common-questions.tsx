@@ -35,10 +35,7 @@ const faqs: FaqItem[] = [
 ];
 export function CommonQuestions() {
   return (
-    <section
-      className="mx-auto mb-[170px] max-w-[960px] scroll-mt-[120px] max-tablet:mb-[120px]"
-      id="faqs"
-    >
+    <section className="mx-auto max-w-[960px] scroll-mt-[120px]" id="faqs">
       <SectionHeading
         eyebrow="Common questions"
         title="Frequently asked questions"

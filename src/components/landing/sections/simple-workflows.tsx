@@ -9,7 +9,7 @@ const steps = [
 ] as const;
 export function SimpleWorkflows() {
   return (
-    <section className="mb-[170px] scroll-mt-[120px] max-tablet:mb-[120px]" id="how-it-works">
+    <section className="scroll-mt-[120px]" id="how-it-works">
       <SectionHeading
         eyebrow="Simple workflows"
         title="How Safegot works for you"
