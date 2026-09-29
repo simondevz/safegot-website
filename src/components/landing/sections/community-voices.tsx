@@ -46,19 +46,19 @@ export function CommunityVoices() {
         </span>
         <blockquote
           aria-live="polite"
-          className="w-full max-w-[779px] text-center font-inter text-[18px] leading-[31px] font-normal text-white"
+          className="w-full max-w-[779px] text-center font-inter text-[18px] leading-[31px] font-normal text-[var(--panel-ink)]"
         >
           {testimonial.quote}
         </blockquote>
         <div className="flex h-[54px] items-center justify-between gap-3 pt-[18.91px]">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--green)] font-nunito text-base leading-5 font-bold text-[#060D1A]">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--green)] font-nunito text-base leading-5 font-bold text-[var(--green-ink)]">
             {testimonial.initials}
           </span>
           <div className="flex h-[39px] w-[86px] flex-col">
-            <strong className="font-inter text-[16px] leading-5 font-semibold text-[#EEF4FC]">
+            <strong className="font-inter text-[16px] leading-5 font-semibold text-[var(--panel-ink)]">
               {testimonial.name}
             </strong>
-            <small className="font-inter text-sm leading-[18px] font-normal text-[#5E7396]">
+            <small className="font-inter text-sm leading-[18px] font-normal text-[var(--panel-faint)]">
               {testimonial.role}
             </small>
           </div>
@@ -69,7 +69,7 @@ export function CommunityVoices() {
           <button
             aria-label={`Show testimonial from ${item.name}`}
             aria-current={activeTestimonial === index ? "true" : undefined}
-            className={`h-2 rounded-full transition-all ${activeTestimonial === index ? "w-6 bg-[var(--green)]" : "w-2 bg-[#5E7396]"}`}
+            className={`h-2 rounded-full transition-all ${activeTestimonial === index ? "w-6 bg-[var(--green)]" : "w-2 bg-[var(--panel-faint)]"}`}
             key={item.name}
             onClick={() => setActiveTestimonial(index)}
             type="button"

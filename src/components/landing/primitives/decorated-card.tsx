@@ -10,14 +10,14 @@ export function DecoratedCard({
   variant = "default",
 }: DecoratedCardProps) {
   const borderColor = {
-    default: "border-[#303D51]",
-    danger: "border-[rgba(239,68,68,0.22)]",
-    success: "border-[rgba(18,183,106,0.28)]",
+    default: "border-[var(--panel-border)]",
+    danger: "border-[var(--danger-soft)]",
+    success: "border-[var(--panel-glow)]",
   }[variant];
 
   return (
     <article
-      className={`relative rounded-[14px] border ${borderColor} bg-[linear-gradient(180deg,rgba(26,51,87,0.55)_0%,rgba(18,37,66,0.55)_100%)] backdrop-blur-[6px] ${className}`}
+      className={`relative rounded-[14px] border ${borderColor} bg-[image:var(--panel-gradient)] backdrop-blur-[6px] ${className}`}
     >
       <span
         aria-hidden="true"

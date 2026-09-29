@@ -14,25 +14,25 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
 
         return (
           <div
-            className="flex w-full flex-col rounded-[10px] border border-[rgba(140,168,210,0.14)] bg-[rgba(18,37,66,0.35)]"
+            className="flex w-full flex-col rounded-[10px] border border-[var(--panel-border)] bg-[var(--panel-soft)]"
             key={item.question}
           >
             <button
-              className="flex min-h-[72px] w-full items-center justify-between gap-6 border-0 bg-transparent px-7 py-6 text-left font-inter text-[18px] leading-6 font-semibold text-white"
+              className="flex min-h-[72px] w-full items-center justify-between gap-6 border-0 bg-transparent px-7 py-6 text-left font-inter text-[18px] leading-6 font-semibold text-[var(--panel-ink)]"
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpenIndex(isOpen ? null : index)}
             >
               <span className="min-w-0 flex-1 break-words">{item.question}</span>
               <span
-                className={`flex h-[46px] w-[48px] shrink-0 items-center justify-center font-['JetBrains_Mono',monospace] text-[35px] leading-[46px] font-bold text-[#17E9A8] transition-transform ${isOpen ? "rotate-45" : "rotate-180"}`}
+                className={`flex h-[46px] w-[48px] shrink-0 items-center justify-center font-['JetBrains_Mono',monospace] text-[35px] leading-[46px] font-bold text-[var(--green-bright)] transition-transform ${isOpen ? "rotate-45" : "rotate-180"}`}
                 aria-hidden="true"
               >
                 +
               </span>
             </button>
             {isOpen && (
-              <p className="m-0 px-7 pb-6 font-inter text-[16px] leading-6 font-normal text-[#8FA3C4]">
+              <p className="m-0 px-7 pb-6 font-inter text-[16px] leading-6 font-normal text-[var(--panel-muted)]">
                 {item.answer}
               </p>
             )}

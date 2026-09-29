@@ -19,11 +19,12 @@ export function MarketFocus() {
   return (
     <section className="scroll-mt-[120px]">
       <div className="flex w-full items-center justify-between gap-5 max-tablet:flex-col">
-        <div className="flex w-full max-w-[773px] flex-col gap-11">
+        <div className="flex w-full max-w-[773px] flex-col">
           <SectionHeading
-            className="mb-0 max-w-[621px]"
+            className="max-w-[621px]"
+            marginBottom="mb-0"
             copy="Commerce is moving faster than formal systems."
-            copyColor="#12B76A"
+            copyColor="var(--green)"
             eyebrow="The market focus"
             title="The trust layer for Africa’s digital commerce."
           />
@@ -31,7 +32,7 @@ export function MarketFocus() {
             copy="Social selling is exploding millions of buyers and sellers transact through chat windows, DM threads, and marketplace listings. The piece that's always been missing is trust."
             id="market-stats"
             steps={marketSteps}
-            stepTextClassName="flex items-center font-inter text-[16px] leading-[22px] font-normal text-white"
+            stepTextClassName="flex items-center font-inter text-[16px] leading-[22px] font-normal text-[var(--ink)]"
           />
           <MarketCallout />
         </div>

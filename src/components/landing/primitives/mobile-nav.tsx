@@ -40,7 +40,7 @@ export function MobileNav() {
           <div className="flex items-center justify-between gap-2.5 border-t border-[var(--border)] pt-3">
             <ThemeToggle />
             <a
-              className="inline-flex min-h-[42px] items-center justify-center gap-3.5 rounded-xl bg-[var(--green)] px-[13px] py-2.5 text-xs font-bold text-white shadow-[0_10px_26px_rgba(18,183,106,0.2)]"
+              className="inline-flex min-h-[42px] items-center justify-center gap-3.5 rounded-xl bg-[var(--green)] px-[13px] py-2.5 text-xs font-bold text-[var(--green-ink)] shadow-[0_10px_26px_var(--panel-glow)]"
               href="#waitlist"
               onClick={() => setOpen(false)}
             >

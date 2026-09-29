@@ -49,26 +49,26 @@ export function ComparisonColumn({ positive = false }: ComparisonColumnProps) {
       variant={positive ? "success" : "danger"}
     >
       <div className="flex h-10 items-center gap-2.5 pb-[22px] font-nunito text-[14px] leading-[17px] font-normal tracking-[1.15px] uppercase">
-        <span className={positive ? "text-[var(--green)]" : "text-[#EF4444]"}>
+        <span className={positive ? "text-[var(--green)]" : "text-[var(--danger-strong)]"}>
           {positive ? "✓" : "✕"}
         </span>
         {positive ? "With Safegot" : "Without Safegot"}
       </div>
       {content.map(([title, copy]) => (
         <div
-          className="flex min-h-[95px] items-center gap-3 border-t border-[#303C51] py-[14px]"
+          className="flex min-h-[95px] items-center gap-3 border-t border-[var(--panel-divider)] py-[14px]"
           key={title}
         >
           <span
-            className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] leading-4 font-bold ${positive ? "bg-[rgba(18,183,106,0.12)] text-[var(--green)]" : "bg-[rgba(239,68,68,0.14)] text-[#EF4444]"}`}
+            className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] leading-4 font-bold ${positive ? "bg-[var(--green-soft)] text-[var(--green)]" : "bg-[var(--danger-soft)] text-[var(--danger-strong)]"}`}
           >
             {positive ? "✓" : "✕"}
           </span>
           <div className="flex min-w-0 flex-1 flex-col gap-[2.46px]">
-            <h3 className="font-inter text-[18px] leading-[22px] font-semibold text-white">
+            <h3 className="font-inter text-[18px] leading-[22px] font-semibold text-[var(--panel-ink)]">
               {title}
             </h3>
-            <p className="m-0 font-inter text-[16px] leading-[21px] font-normal text-[#8FA3C4]">
+            <p className="m-0 font-inter text-[16px] leading-[21px] font-normal text-[var(--panel-muted)]">
               {copy}
             </p>
           </div>

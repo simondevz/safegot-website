@@ -42,7 +42,7 @@ export function Breakthrough() {
             >
               {stat.value}
             </span>
-            <span className="flex h-[22px] w-full items-center font-inter text-[16px] leading-[22px] font-normal text-[#8FA3C4]">
+            <span className="flex h-[22px] w-full items-center font-inter text-[16px] leading-[22px] font-normal text-[var(--muted)]">
               {stat.label}
             </span>
           </DecoratedCard>
