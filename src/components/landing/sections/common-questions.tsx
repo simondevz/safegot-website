@@ -1,7 +1,7 @@
 import { FaqAccordion, type FaqItem } from "../primitives/faq";
 import { SectionHeading } from "../primitives/section-heading";
 
-const faqs: FaqItem[] = [
+export const faqs: FaqItem[] = [
   {
     question: "What exactly is Safegot and how does it protect my transaction?",
     answer:

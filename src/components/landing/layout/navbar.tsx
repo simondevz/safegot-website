@@ -5,8 +5,8 @@ import { ThemeToggle } from "../primitives/theme-toggle";
 
 const navLinks = [
   ["How it works", "#how-it-works"],
-  ["For sellers", "#sellers"],
-  ["For buyers", "#buyers"],
+  ["For sellers", "#how-it-works"],
+  ["For buyers", "#how-it-works"],
   ["FAQs", "#faqs"],
 ] as const;
 export function Navbar() {
