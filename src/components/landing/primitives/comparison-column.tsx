@@ -45,7 +45,7 @@ export function ComparisonColumn({ positive = false }: ComparisonColumnProps) {
 
   return (
     <DecoratedCard
-      className="flex h-[480px] flex-1 flex-col px-7 py-7"
+      className="flex h-[480px] flex-1 flex-col px-7 py-7 max-tablet:h-auto max-tablet:min-h-[480px]"
       variant={positive ? "success" : "danger"}
     >
       <div className="flex h-10 items-center gap-2.5 pb-[22px] font-nunito text-[14px] leading-[17px] font-normal tracking-[1.15px] uppercase">

@@ -8,7 +8,7 @@ type PersonaCardProps = {
 
 export function PersonaCard({ persona }: PersonaCardProps) {
   return (
-    <DecoratedCard className="flex h-[283px] w-[350px] flex-col gap-[5px] px-6 py-[26px]">
+    <DecoratedCard className="flex h-[283px] w-[350px] flex-col gap-[5px] px-6 py-[26px] max-tablet:w-full max-tablet:max-w-[350px] max-mobile:h-auto max-mobile:min-h-[283px]">
       <div className="grid h-[38px] w-[38px] place-items-center rounded-[9px] bg-[var(--green-soft)] text-[23px] text-[var(--green)]">
         {persona.symbol}
       </div>

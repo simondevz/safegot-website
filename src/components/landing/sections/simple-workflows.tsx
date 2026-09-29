@@ -59,10 +59,10 @@ export function SimpleWorkflows() {
             title="How Safegot works for you"
             copy="We bridge the trust gap with a tailored flow for everyone in the commerce loop."
           />
-          <div className="flex h-[74px] w-full max-w-[627px] items-center justify-between gap-10 rounded-xl border border-[var(--border)] p-2 max-mobile:gap-1">
+          <div className="flex h-[74px] w-full max-w-[627px] items-center justify-between gap-10 rounded-xl border border-[var(--border)] p-2 max-mobile:grid max-mobile:h-auto max-mobile:grid-cols-3 max-mobile:gap-1">
             {workflows.map(({ id, label }) => (
               <button
-                className={`flex h-[52px] min-w-0 flex-1 items-center justify-center rounded-xl px-6 py-4 font-arial text-sm leading-5 font-bold tracking-[0.003em] capitalize ${activeWorkflow === id ? "bg-[var(--green)] text-[var(--green-ink)]" : "text-[var(--muted)]"}`}
+                className={`flex h-[52px] min-w-0 flex-1 items-center justify-center rounded-xl px-6 py-4 font-arial text-sm leading-5 font-bold tracking-[0.003em] capitalize max-mobile:px-1 max-mobile:py-3 max-mobile:text-xs ${activeWorkflow === id ? "bg-[var(--green)] text-[var(--green-ink)]" : "text-[var(--muted)]"}`}
                 key={id}
                 onClick={() => setActiveWorkflow(id)}
                 type="button"

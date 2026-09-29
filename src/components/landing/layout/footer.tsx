@@ -44,7 +44,7 @@ function LinkGroup({
 
 function ContactDetails() {
   return (
-    <address className="ml-auto flex w-[250px] flex-col gap-[15px] pt-5 not-italic max-tablet:ml-0">
+    <address className="ml-auto flex w-[250px] flex-col gap-[15px] pt-5 not-italic max-tablet:col-span-2 max-tablet:ml-0 max-tablet:w-full max-mobile:col-span-1">
       <span className="font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-ink)]">Contact</span>
       <a
         className="font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)] hover:text-[var(--green)]"
@@ -68,15 +68,15 @@ function ContactDetails() {
 export function Footer() {
   return (
     <footer className="w-full border-t border-[var(--footer-border)] py-2.5">
-      <div className="mx-auto grid min-h-[280px] w-full max-w-[1383px] grid-cols-[245px_minmax(0,1fr)_250px] items-start gap-10 px-7 max-tablet:flex max-tablet:flex-wrap max-tablet:justify-between max-tablet:gap-10 max-tablet:px-[22px] max-mobile:flex-col max-mobile:items-start max-mobile:py-8">
-        <div className="flex h-[202px] w-[245px] flex-col gap-2.5 px-2.5 py-5 max-mobile:items-start">
+      <div className="mx-auto grid min-h-[280px] w-full max-w-[1383px] grid-cols-[245px_minmax(0,1fr)_250px] items-start gap-10 px-7 max-tablet:min-h-0 max-tablet:grid max-tablet:grid-cols-2 max-tablet:gap-8 max-tablet:px-[22px] max-mobile:grid-cols-1 max-mobile:items-start max-mobile:gap-8 max-mobile:py-8">
+        <div className="flex h-[202px] w-[245px] flex-col gap-2.5 px-2.5 py-5 max-tablet:h-auto max-tablet:w-full max-mobile:items-start max-mobile:px-0 max-mobile:py-0">
           <Logo />
-          <p className="flex h-[84px] w-[225px] items-center font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)]">
+          <p className="flex h-[84px] w-[225px] items-center font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)] max-mobile:h-auto max-mobile:w-full">
             Safegot holds funds in trust until delivery is verified , the trust layer for Africa’s
             digital commerce
           </p>
         </div>
-        <div className="flex justify-center gap-5 pt-5">
+        <div className="flex justify-center gap-5 pt-5 max-tablet:flex-col max-tablet:items-start max-tablet:justify-start max-mobile:pt-0">
           <LinkGroup links={productLinks} title="Product" />
           <LinkGroup links={resourceLinks} title="Resources" />
           <LinkGroup links={legalLinks} title="Legal" />

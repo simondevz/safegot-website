@@ -14,7 +14,7 @@ export function LandingPage() {
   return (
     <main id="top" className="text-[var(--ink)]">
       <Navbar />
-      <div className="mx-auto flex flex-col gap-[80px] max-w-[1403px] px-10 pb-[120px] pt-[30px] max-tablet:px-[22px] max-tablet:pb-[90px] max-tablet:pt-[70px]">
+      <div className="mx-auto flex max-w-[1403px] flex-col gap-[80px] px-10 pb-[120px] pt-[30px] max-tablet:gap-16 max-tablet:px-[22px] max-tablet:pb-[90px] max-tablet:pt-12 max-mobile:gap-12 max-mobile:pt-8">
         <Hero />
         <Friction />
         <Breakthrough />

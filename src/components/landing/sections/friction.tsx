@@ -29,7 +29,7 @@ export function Friction() {
         title="Online commerce in Africa still runs on trust gaps"
         copy="Social selling has unlocked micro-entrepreneurship for millions across WhatsApp, Instagram, and Marketplace. But transacting with strangers still means friction — for everyone in the chain."
       />
-      <div className="flex justify-between gap-[18px]">
+      <div className="flex justify-between gap-[18px] max-tablet:flex-col max-tablet:items-center">
         {personas.map((persona) => (
           <PersonaCard key={persona.role} persona={persona} />
         ))}
