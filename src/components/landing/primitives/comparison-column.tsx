@@ -44,31 +44,37 @@ export function ComparisonColumn({ positive = false }: ComparisonColumnProps) {
   const content = positive ? advantages : risks;
 
   return (
-    <div className="rounded-[20px] border border-[var(--border)] bg-[linear-gradient(140deg,var(--surface-soft),color-mix(in_srgb,var(--surface)_65%,transparent))] p-7 shadow-[var(--shadow)] backdrop-blur-xl">
-      <div className="flex items-center gap-2.5 border-b border-[var(--border)] pb-[23px] text-sm font-bold text-[var(--muted)]">
-        <span className={positive ? "text-xl text-[var(--green)]" : "text-xl text-[var(--danger)]"}>
+    <DecoratedCard
+      className="flex h-[480px] flex-1 flex-col px-7 py-7"
+      variant={positive ? "success" : "danger"}
+    >
+      <div className="flex h-10 items-center gap-2.5 pb-[22px] font-nunito text-[14px] leading-[17px] font-normal tracking-[1.15px] uppercase">
+        <span className={positive ? "text-[var(--green)]" : "text-[#EF4444]"}>
           {positive ? "✓" : "✕"}
         </span>
         {positive ? "With Safegot" : "Without Safegot"}
       </div>
       {content.map(([title, copy]) => (
         <div
-          className="grid grid-cols-[28px_1fr] gap-3.5 border-b border-[var(--border)] py-[23px] last:border-0 last:pb-0"
+          className="flex min-h-[95px] items-center gap-3 border-t border-[#303C51] py-[14px]"
           key={title}
         >
           <span
-            className={
-              positive ? "text-[17px] text-[var(--green)]" : "text-[17px] text-[var(--danger)]"
-            }
+            className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] leading-4 font-bold ${positive ? "bg-[rgba(18,183,106,0.12)] text-[var(--green)]" : "bg-[rgba(239,68,68,0.14)] text-[#EF4444]"}`}
           >
             {positive ? "✓" : "✕"}
           </span>
-          <div>
-            <h3 className="mb-[7px] text-[15px]">{title}</h3>
-            <p className="m-0 text-sm leading-[1.55] text-[var(--muted)]">{copy}</p>
+          <div className="flex min-w-0 flex-1 flex-col gap-[2.46px]">
+            <h3 className="font-inter text-[18px] leading-[22px] font-semibold text-white">
+              {title}
+            </h3>
+            <p className="m-0 font-inter text-[16px] leading-[21px] font-normal text-[#8FA3C4]">
+              {copy}
+            </p>
           </div>
         </div>
       ))}
-    </div>
+    </DecoratedCard>
   );
 }
+import { DecoratedCard } from "./decorated-card";

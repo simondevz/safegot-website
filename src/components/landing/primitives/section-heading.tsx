@@ -2,11 +2,14 @@ type SectionHeadingProps = {
   eyebrow: string;
   title: string;
   copy?: string;
+  align?: "left" | "center";
 };
 
-export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, copy, align = "left" }: SectionHeadingProps) {
+  const alignment = align === "center" ? "items-center text-center" : "items-start text-left";
+
   return (
-    <div className="mb-[52px] max-w-[760px]">
+    <div className={`mb-[52px] flex w-full flex-col ${alignment}`}>
       <span className="mb-[17px] inline-flex items-center gap-[9px] align-middle font-nunito text-base font-normal leading-[18px] tracking-[1.68px] text-[var(--green)] uppercase before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#12B76A] before:shadow-[0_0_8px_0_#12B76A] before:content-['']">
         {eyebrow}
       </span>

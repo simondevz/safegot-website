@@ -1,32 +1,52 @@
-import { EscrowDashboard } from "../primitives/escrow-dashboard";
+import { DecoratedCard } from "../primitives/decorated-card";
 import { SectionHeading } from "../primitives/section-heading";
+
+const showcaseStats = [
+  {
+    value: "0%",
+    label: "Payment scams on protected deals",
+    valueClassName: "font-nunito",
+    paddingClassName: "px-6",
+  },
+  {
+    value: "10×",
+    label: "Faster checkout than manual transfer",
+    valueClassName: "font-['JetBrains_Mono',monospace]",
+    paddingClassName: "px-[26px]",
+  },
+  {
+    value: "100%",
+    label: "Verified escrow on every order",
+    valueClassName: "font-['JetBrains_Mono',monospace]",
+    paddingClassName: "px-[26px]",
+  },
+] as const;
+
 export function Breakthrough() {
   return (
     <section className="scroll-mt-[120px]" id="about">
       <SectionHeading
+        align="center"
         eyebrow="The breakthrough"
         title="Meet Safegot"
         copy="Safegot holds funds securely in trust until delivery is verified, then releases payment automatically. We bridge the trust gap, so you can scale your business or shop without fear."
       />
-      <div className="grid grid-cols-[0.9fr_1.1fr] gap-5 max-tablet:grid-cols-1">
-        <div className="flex min-h-[430px] flex-col justify-center rounded-[22px] border border-[var(--border)] bg-[linear-gradient(140deg,var(--surface-soft),color-mix(in_srgb,var(--surface)_65%,transparent))] p-[42px] shadow-[var(--shadow)] backdrop-blur-xl max-mobile:p-7">
-          <span className="text-[clamp(5rem,12vw,9rem)] font-extrabold leading-[0.8] tracking-[-0.12em] text-[var(--green)]">
-            0%
-          </span>
-          <p className="my-[26px] mb-[45px] text-[17px] text-[var(--muted)]">
-            Payment scams on protected deals
-          </p>
-          <div className="grid grid-cols-2 gap-5 text-xs text-[var(--muted)] max-mobile:grid-cols-1">
-            <span className="grid gap-[7px]">
-              <b className="text-[22px] text-[var(--ink)]">10×</b>Faster checkout than manual
-              transfer
+      <div className="flex w-full items-center justify-between gap-5 max-tablet:flex-col">
+        {showcaseStats.map((stat) => (
+          <DecoratedCard
+            className={`flex h-[138px] w-full max-w-[350px] flex-1 flex-col items-start gap-[10px] py-8 ${stat.paddingClassName}`}
+            key={stat.value}
+          >
+            <span
+              className={`flex h-10 w-full items-center text-[40px] leading-10 font-bold text-[var(--green)] ${stat.valueClassName}`}
+            >
+              {stat.value}
             </span>
-            <span className="grid gap-[7px]">
-              <b className="text-[22px] text-[var(--ink)]">100%</b>Verified escrow on every order
+            <span className="flex h-[22px] w-full items-center font-inter text-[16px] leading-[22px] font-normal text-[#8FA3C4]">
+              {stat.label}
             </span>
-          </div>
-        </div>
-        <EscrowDashboard />
+          </DecoratedCard>
+        ))}
       </div>
     </section>
   );
