@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function EscrowDashboard() {
   return (
-    <div className="mx-auto aspect-[500/418] w-full max-w-[500px] pb-[40px] my-auto">
+    <div className="mx-auto aspect-[500/418] w-full max-w-[500px] py-[40px] my-auto">
       <Image
         className="block h-auto w-full dark:hidden"
         src="/landing/escrow-card-light.svg"
