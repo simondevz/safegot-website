@@ -3,21 +3,21 @@ import { SectionHeading } from "../primitives/section-heading";
 
 const showcaseStats = [
   {
-    value: "0%",
-    label: "Payment scams on protected deals",
+    value: "HOLD",
+    label: "Funds stay in escrow before delivery",
     valueClassName: "font-nunito",
     paddingClassName: "px-6",
   },
   {
-    value: "10×",
-    label: "Faster checkout than manual transfer",
-    valueClassName: "font-['JetBrains_Mono',monospace]",
+    value: "CHECK",
+    label: "Buyer inspects before confirming",
+    valueClassName: "font-nunito",
     paddingClassName: "px-[26px]",
   },
   {
-    value: "100%",
-    label: "Verified escrow on every order",
-    valueClassName: "font-['JetBrains_Mono',monospace]",
+    value: "RELEASE",
+    label: "Payout follows delivery verification",
+    valueClassName: "font-nunito",
     paddingClassName: "px-[26px]",
   },
 ] as const;
@@ -29,7 +29,7 @@ export function Breakthrough() {
         align="center"
         eyebrow="The breakthrough"
         title="Meet Safegot"
-        copy="Safegot holds funds securely in trust until delivery is verified, then releases payment automatically. We bridge the trust gap, so you can scale your business or shop without fear."
+        copy="Safegot holds payment in escrow until delivery is verified, then releases the seller’s payout. Buyers get time to inspect; sellers get confirmation before they dispatch."
       />
       <div className="flex w-full items-center justify-between gap-5 max-tablet:flex-col">
         {showcaseStats.map((stat) => (

@@ -5,8 +5,8 @@ import { ThemeToggle } from "./theme-toggle";
 
 const links = [
   ["How it works", "#how-it-works"],
-  ["For sellers", "#sellers"],
-  ["For buyers", "#buyers"],
+  ["For sellers", "#how-it-works"],
+  ["For buyers", "#how-it-works"],
   ["FAQs", "#faqs"],
 ] as const;
 
@@ -41,10 +41,10 @@ export function MobileNav() {
             <ThemeToggle />
             <a
               className="inline-flex min-h-[42px] items-center justify-center gap-3.5 rounded-xl bg-[var(--green)] px-[13px] py-2.5 text-xs font-bold text-[var(--green-ink)] shadow-[0_10px_26px_var(--panel-glow)]"
-              href="#waitlist"
+              href="https://app.safegot.com"
               onClick={() => setOpen(false)}
             >
-              Join the waitlist
+              Try Safegot
             </a>
           </div>
         </div>

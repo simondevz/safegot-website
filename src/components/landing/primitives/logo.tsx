@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Logo() {
   return (
-    <a className="inline-flex w-[130px] items-center" href="#top" aria-label="Safegot home">
+    <Link className="inline-flex w-[130px] items-center" href="/" aria-label="Safegot home">
       <Image
         className="block h-auto w-full dark:hidden"
         src="/safegot.png"
@@ -18,6 +19,6 @@ export function Logo() {
         width={2172}
         height={724}
       />
-    </a>
+    </Link>
   );
 }

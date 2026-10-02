@@ -17,7 +17,7 @@ export function RoleFlowCard({
   return (
     <article className="scroll-mt-[120px] mt-[20px] w-full max-w-[773px]" id={id}>
       {title && (
-        <h3 className="mb-[30px] font-inter text-[30px] leading-[22px] font-semibold text-[var(--ink)]">
+        <h3 className="mb-[30px] font-inter text-[30px] leading-[22px] font-semibold text-[var(--ink)] max-mobile:text-[26px] max-mobile:leading-8">
           {title}
         </h3>
       )}

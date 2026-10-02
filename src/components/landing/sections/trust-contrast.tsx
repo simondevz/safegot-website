@@ -7,7 +7,7 @@ export function TrustContrast() {
         align="center"
         eyebrow="Trust contrast"
         title="The Safegot trust advantage"
-        copy="Comparing the stress of traditional social commerce to the confidence of a Safegot-protected sale."
+        copy="See how escrow, payment confirmation, and delivery verification create a clearer process for every side of a sale."
       />
       <div className="flex justify-between gap-[18px] max-tablet:flex-col">
         <ComparisonColumn />

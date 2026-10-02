@@ -5,7 +5,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What exactly is Safegot and how does it protect my transaction?",
     answer:
-      "Safegot is an escrow layer for social commerce. Funds move into a secure trust vault and release only once the buyer confirms delivery.",
+      "Safegot is an escrow layer for social commerce. Funds move into escrow and are released after the buyer confirms delivery.",
   },
   {
     question: "Does it require a mobile app download to use?",
@@ -19,8 +19,7 @@ export const faqs: FaqItem[] = [
   },
   {
     question: "Are there any setup fees or hidden costs to join?",
-    answer:
-      "Safegot is free during early access. Any transaction fees are shown clearly before payment is confirmed.",
+    answer: "Any transaction fees are shown clearly before payment is confirmed.",
   },
   {
     question: "How does Safegot integrate with social selling channels like WhatsApp?",

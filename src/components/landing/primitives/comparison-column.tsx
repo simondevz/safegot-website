@@ -1,16 +1,10 @@
 const advantages = [
-  [
-    "Bank-grade escrow vaults",
-    "Payments sit in licensed trust accounts until the buyer confirms receipt.",
-  ],
+  ["Escrow-held payments", "Payments stay in escrow until the buyer confirms delivery."],
   [
     "Verified payment holds",
     "Sellers see confirmed, bank-verified funds — never a forwarded screenshot.",
   ],
-  [
-    "Automated fast payouts",
-    "Funds release to the merchant automatically the moment delivery is verified.",
-  ],
+  ["Payout after verification", "Funds are released to the merchant after delivery is verified."],
   [
     "Contactless handover",
     "Riders confirm delivery with a code — no cash changes hands on the route.",

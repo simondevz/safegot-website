@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Safegot — Secure escrow for African commerce",
     short_name: "Safegot",
-    description: "Secure escrow for safer buying, selling, and delivery across Africa.",
+    description: "Escrow and delivery verification for clearer buying and selling across Africa.",
     start_url: "/",
     display: "standalone",
     background_color: "#f6f9fc",

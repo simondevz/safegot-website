@@ -10,8 +10,8 @@ const workflows = [
     id: "buyers",
     label: "For buyers",
     role: "For buyers",
-    title: "Shop with absolute peace of mind",
-    copy: "Buyers no longer send money into uncertainty. When you check out on Instagram or WhatsApp, your funds sit in a secure trust vault, not the seller's pocket, until you confirm the order is correct.",
+    title: "Shop with more confidence",
+    copy: "Buyers do not have to send money directly to an unfamiliar seller. When you check out through a Safegot link, your payment stays in escrow until you confirm the order is correct.",
     steps: [
       "Lock your payment securely via the checkout link",
       "Inspect the package the moment it arrives at your door",
@@ -22,7 +22,7 @@ const workflows = [
     id: "sellers",
     label: "For sellers",
     role: "For sellers",
-    title: "Ship with confirmed payment",
+    title: "Ship with payment confirmation",
     copy: "Create a payment link, share it where you sell, and only dispatch once Safegot confirms the buyer's funds are secured.",
     steps: [
       "Create a protected payment link",

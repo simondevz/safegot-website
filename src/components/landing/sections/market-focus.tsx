@@ -23,13 +23,13 @@ export function MarketFocus() {
           <SectionHeading
             className="max-w-[621px]"
             marginBottom="mb-0"
-            copy="Commerce is moving faster than formal systems."
+            copy="Commerce is moving faster than the systems built to support it."
             copyColor="var(--green)"
             eyebrow="The market focus"
             title="The trust layer for Africa’s digital commerce."
           />
           <RoleFlowCard
-            copy="Social selling is exploding millions of buyers and sellers transact through chat windows, DM threads, and marketplace listings. The piece that's always been missing is trust."
+            copy="Social selling is growing quickly. Buyers and sellers transact through chat windows, DMs, and marketplace listings, but the payment and delivery handoff still needs a clearer layer of trust."
             id="market-stats"
             steps={marketSteps}
             stepTextClassName="flex items-center font-inter text-[16px] leading-[22px] font-normal text-[var(--ink)]"

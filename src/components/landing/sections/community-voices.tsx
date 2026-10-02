@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DecoratedCard } from "../primitives/decorated-card";
 import { SectionHeading } from "../primitives/section-heading";
 
@@ -30,40 +30,106 @@ const testimonials = [
 
 export function CommunityVoices() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const testimonial = testimonials[activeTestimonial];
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updateMotionPreference();
+    mediaQuery.addEventListener("change", updateMotionPreference);
+    return () => mediaQuery.removeEventListener("change", updateMotionPreference);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || prefersReducedMotion) return;
+
+    const interval = window.setInterval(() => {
+      setActiveTestimonial((current) => (current + 1) % testimonials.length);
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, [isPaused, prefersReducedMotion]);
+
+  const showTestimonial = (index: number) => {
+    setActiveTestimonial((index + testimonials.length) % testimonials.length);
+  };
+
+  const moveTestimonial = (direction: 1 | -1) => {
+    showTestimonial(activeTestimonial + direction);
+  };
+
   return (
-    <section className="mx-auto max-w-[940px] scroll-mt-[120px]">
+    <section
+      aria-label="Customer testimonials"
+      className="mx-auto max-w-[940px] scroll-mt-[120px]"
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setIsPaused(false);
+      }}
+      onFocus={() => setIsPaused(true)}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <SectionHeading
         align="center"
         eyebrow="Community voices"
-        title="People are already excited about safer online commerce"
-        copy="Thousands of buyers and sellers have felt the friction of online transactions. Here's what people are saying about the trust Safegot is bringing."
+        title="A clearer way to transact online"
+        copy="Safegot is designed around the real handoffs between buyers, sellers, and riders — with payment protection built into the process."
       />
-      <DecoratedCard className="flex min-h-[297px] w-full flex-col items-center justify-center gap-[10px] rounded-[14px] px-6 py-8">
-        <span className="font-sans text-[44px] leading-[44px] font-normal text-[var(--green)]">
-          “
-        </span>
-        <blockquote
-          aria-live="polite"
-          className="w-full max-w-[779px] text-center font-inter text-[18px] leading-[31px] font-normal text-[var(--panel-ink)]"
-        >
-          {testimonial.quote}
-        </blockquote>
-        <div className="flex h-[54px] items-center justify-between gap-3 pt-[18.91px]">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--green)] font-nunito text-base leading-5 font-bold text-[var(--green-ink)]">
-            {testimonial.initials}
-          </span>
-          <div className="flex h-[39px] w-[86px] flex-col">
-            <strong className="font-inter text-[16px] leading-5 font-semibold text-[var(--panel-ink)]">
-              {testimonial.name}
-            </strong>
-            <small className="font-inter text-sm leading-[18px] font-normal text-[var(--panel-faint)]">
-              {testimonial.role}
-            </small>
+      <div aria-label="Testimonials carousel" aria-roledescription="carousel" role="region">
+        <DecoratedCard className="flex min-h-[297px] w-full flex-col items-center justify-center gap-[10px] rounded-[14px] px-6 py-8">
+          <div
+            aria-label={`Testimonial ${activeTestimonial + 1} of ${testimonials.length}`}
+            aria-roledescription="slide"
+            className="testimonial-slide flex w-full flex-col items-center"
+            key={testimonial.name}
+            role="group"
+          >
+            <span className="font-sans text-[44px] leading-[44px] font-normal text-[var(--green)]">
+              “
+            </span>
+            <blockquote
+              aria-live="polite"
+              className="w-full max-w-[779px] text-center font-inter text-[18px] leading-[31px] font-normal text-[var(--panel-ink)]"
+            >
+              {testimonial.quote}
+            </blockquote>
+            <div className="flex h-[54px] items-center justify-between gap-3 pt-[18.91px]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--green)] font-nunito text-base leading-5 font-bold text-[var(--green-ink)]">
+                {testimonial.initials}
+              </span>
+              <div className="flex h-[39px] w-[86px] flex-col">
+                <strong className="font-inter text-[16px] leading-5 font-semibold text-[var(--panel-ink)]">
+                  {testimonial.name}
+                </strong>
+                <small className="font-inter text-sm leading-[18px] font-normal text-[var(--panel-faint)]">
+                  {testimonial.role}
+                </small>
+              </div>
+            </div>
           </div>
-        </div>
-      </DecoratedCard>
+          <div className="flex w-full items-center justify-between" aria-label="Carousel controls">
+            <button
+              aria-label="Previous testimonial"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--panel-border)] text-xl text-[var(--panel-ink)] transition-colors hover:border-[var(--green)] hover:text-[var(--green)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green)]"
+              onClick={() => moveTestimonial(-1)}
+              type="button"
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+            <button
+              aria-label="Next testimonial"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--panel-border)] text-xl text-[var(--panel-ink)] transition-colors hover:border-[var(--green)] hover:text-[var(--green)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green)]"
+              onClick={() => moveTestimonial(1)}
+              type="button"
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </DecoratedCard>
+      </div>
       <div className="mt-5 flex items-center justify-center gap-2" aria-label="Testimonials">
         {testimonials.map((item, index) => (
           <button
@@ -71,7 +137,7 @@ export function CommunityVoices() {
             aria-current={activeTestimonial === index ? "true" : undefined}
             className={`h-2 rounded-full transition-all ${activeTestimonial === index ? "w-6 bg-[var(--green)]" : "w-2 bg-[var(--panel-faint)]"}`}
             key={item.name}
-            onClick={() => setActiveTestimonial(index)}
+            onClick={() => showTestimonial(index)}
             type="button"
           />
         ))}

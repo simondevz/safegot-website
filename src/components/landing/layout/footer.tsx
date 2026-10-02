@@ -4,18 +4,15 @@ const productLinks = [
   ["How it works", "#how-it-works"],
   ["Why Safegot", "#advantage"],
   ["FAQs", "#faqs"],
-  ["Join the waitlist", "#waitlist"],
+  ["Try Safegot", "https://app.safegot.com"],
 ] as const;
 
 const legalLinks = [
-  ["Terms", "#terms"],
-  ["Privacy policy", "#privacy"],
+  ["Terms", "/terms"],
+  ["Privacy policy", "/privacy"],
 ] as const;
 
-const resourceLinks = [
-  ["FAQs", "#faqs"],
-  ["Blog", "#blog"],
-] as const;
+const resourceLinks = [["FAQs", "#faqs"]] as const;
 
 function LinkGroup({
   title,
@@ -45,7 +42,9 @@ function LinkGroup({
 function ContactDetails() {
   return (
     <address className="ml-auto flex w-[250px] flex-col gap-[15px] pt-5 not-italic max-tablet:col-span-2 max-tablet:ml-0 max-tablet:w-full max-mobile:col-span-1">
-      <span className="font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-ink)]">Contact</span>
+      <span className="font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-ink)]">
+        Contact
+      </span>
       <a
         className="font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)] hover:text-[var(--green)]"
         href="mailto:team@safegot.com"
@@ -72,8 +71,8 @@ export function Footer() {
         <div className="flex h-[202px] w-[245px] flex-col gap-2.5 px-2.5 py-5 max-tablet:h-auto max-tablet:w-full max-mobile:items-start max-mobile:px-0 max-mobile:py-0">
           <Logo />
           <p className="flex h-[84px] w-[225px] items-center font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)] max-mobile:h-auto max-mobile:w-full">
-            Safegot holds funds in trust until delivery is verified , the trust layer for Africa’s
-            digital commerce
+            Safegot holds funds in escrow until delivery is verified — the trust layer for Africa’s
+            digital commerce.
           </p>
         </div>
         <div className="flex justify-center gap-5 pt-5 max-tablet:flex-col max-tablet:items-start max-tablet:justify-start max-mobile:pt-0">
