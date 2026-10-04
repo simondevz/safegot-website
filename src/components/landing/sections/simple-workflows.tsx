@@ -11,7 +11,7 @@ const workflows = [
     label: "For buyers",
     role: "For buyers",
     title: "Shop with more confidence",
-    copy: "Buyers do not have to send money directly to an unfamiliar seller. When you check out through a Safegot link, your payment stays in escrow until you confirm the order is correct.",
+    copy: "Buyers do not have to send money directly to an unfamiliar seller. When you check out through a Safegot link, your payment stays protected until you confirm the order is correct.",
     steps: [
       "Lock your payment securely via the checkout link",
       "Inspect the package the moment it arrives at your door",

@@ -5,7 +5,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What exactly is Safegot and how does it protect my transaction?",
     answer:
-      "Safegot is an escrow layer for social commerce. Funds move into escrow and are released after the buyer confirms delivery.",
+      "Safegot is a secure checkout layer for social commerce. Payment is protected and released after the buyer confirms delivery.",
   },
   {
     question: "Does it require a mobile app download to use?",
@@ -29,7 +29,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Is my money safe?",
     answer:
-      "Your payment is held in escrow until the delivery step is verified, instead of being sent directly to an unknown seller.",
+      "Your payment stays protected until the delivery step is verified, instead of being sent directly to an unknown seller.",
   },
 ];
 export function CommonQuestions() {

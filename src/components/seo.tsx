@@ -32,7 +32,7 @@ const structuredData = {
     {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
-      name: "Safegot — Secure escrow for African commerce",
+      name: "Safegot — Secure checkout for African commerce",
       url: siteUrl,
       isPartOf: { "@id": `${siteUrl}/#website` },
       about: { "@id": `${siteUrl}/#organization` },

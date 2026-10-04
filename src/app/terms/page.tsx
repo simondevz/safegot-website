@@ -11,12 +11,12 @@ const sections: LegalSection[] = [
   {
     title: "1. Description of Service",
     paragraphs: [
-      "Safegot provides software development, IT services, and a digital trust infrastructure tailored for social commerce and e-commerce. We specialize in digital order management, verified payment holds (escrow), delivery confirmation systems, and automated enterprise software solutions.",
+      "Safegot provides software development, IT services, and a digital trust infrastructure tailored for social commerce and e-commerce. We specialize in digital order management, secure payment holds, delivery confirmation systems, and automated enterprise software solutions.",
       "Our core service acts as a secure intermediary for online transactions:",
-      "For Buyers: We securely hold your payment in a bank-grade escrow vault until you receive and verify your order.",
+      "For Buyers: We coordinate a secure payment hold until you receive and verify your order.",
       "For Sellers: We provide real-time, verified deposit confirmations before you dispatch goods, eliminating the risk of fake bank alerts and upfront payment fraud.",
       "For Logistics/Riders: We offer a digital, contactless handover portal that uses one-time validation codes to confirm delivery, eliminating the need to carry physical cash.",
-      "Safegot is a technology service provider and escrow agent, not a retail merchant, logistics provider, or financial institution. We do not sell the goods transacted on the platform.",
+      "Safegot is a technology service provider, not a retail merchant, logistics provider, or financial institution. We do not sell the goods transacted on the platform.",
     ],
   },
   {
@@ -30,11 +30,11 @@ const sections: LegalSection[] = [
     ],
   },
   {
-    title: "3. The Safegot Escrow Process",
+    title: "3. The Safegot Payment Protection Process",
     paragraphs: [
       "All transactions processed through Safegot follow a strict, automated sequence to ensure maximum security for all parties:",
       "Payment Initiation: The Seller generates a custom payment link and shares it with the Buyer.",
-      "Secure Hold: The Buyer completes the payment through the Safegot portal. Funds are securely locked in our escrow vaults.",
+      "Secure Hold: The Buyer completes the payment through the Safegot portal. The payment remains protected while the order is prepared for delivery.",
       "Dispatch Notification: Safegot instantly notifies the Seller that the deposit is secured, prompting the dispatch of the order.",
       "Delivery and Verification: Upon arrival, the Buyer inspects the package. Confirmation works in two ways, depending on the delivery method:",
       "Local riders: If the order is correct and satisfactory, the buyer gives their unique, single-use validation code to the rider or enters it into the Safegot portal.",
@@ -48,7 +48,7 @@ const sections: LegalSection[] = [
     title: "4. Disputes, Returns, and Refunds",
     paragraphs: [
       "If a Buyer is unsatisfied with an order upon delivery (e.g., wrong item, damaged goods), they must not provide the validation code to the rider.",
-      "Raising a Dispute: The Buyer or Seller must flag the transaction as disputed within the platform. Safegot will hold the funds in escrow until the dispute is resolved.",
+      "Raising a Dispute: The Buyer or Seller must flag the transaction as disputed within the platform. The payment remains protected until the dispute is resolved.",
       "Resolution: Buyers and Sellers are encouraged to resolve disputes directly. If an agreement cannot be reached (e.g., return of the item to the seller), Safegot’s dispute resolution team will review evidence (dispatch proof, communication, rider logs) to determine whether to refund the Buyer or release funds to the Seller.",
       "Refund Policy: Approved refunds will be processed back to the Buyer's original payment method within standard banking timelines. Platform processing fees and dispatch fees are non-refundable.",
     ],
@@ -57,7 +57,7 @@ const sections: LegalSection[] = [
     title: "5. Fees and Payouts",
     paragraphs: [
       "Sellers: Payouts are settled automatically to the registered bank account upon successful code validation. Sellers are responsible for ensuring their bank details are accurate.",
-      "Platform Fees: Safegot charges a clearly displayed service/escrow fee per transaction. By proceeding with a transaction, you agree to the applicable fees shown at checkout.",
+      "Platform Fees: Safegot charges a clearly displayed service fee per transaction. By proceeding with a transaction, you agree to the applicable fees shown at checkout.",
     ],
   },
   {
@@ -66,7 +66,7 @@ const sections: LegalSection[] = [
       "You agree not to use Safegot to:",
       "Facilitate transactions for illegal goods, weapons, illicit drugs, counterfeit items, or adult content.",
       "Engage in money laundering, fraudulent schemes, or any activity that violates Nigerian law.",
-      "Attempt to bypass, hack, or manipulate the escrow system, validation code mechanics, or user portals.",
+      "Attempt to bypass, hack, or manipulate the payment protection system, validation code mechanics, or user portals.",
     ],
   },
   {
@@ -126,7 +126,7 @@ const sections: LegalSection[] = [
   {
     title: "15. Tax Liabilities",
     paragraphs: [
-      "Safegot is merely a facilitator of payments and escrow. Sellers are solely responsible for determining, collecting, withholding, reporting, and remitting applicable taxes, duties, and government fees associated with their sales. Safegot is not responsible for paying any taxes on behalf of Sellers or Buyers.",
+      "Safegot is a facilitator of payments and delivery verification. Sellers are solely responsible for determining, collecting, withholding, reporting, and remitting applicable taxes, duties, and government fees associated with their sales. Safegot is not responsible for paying any taxes on behalf of Sellers or Buyers.",
     ],
   },
   {

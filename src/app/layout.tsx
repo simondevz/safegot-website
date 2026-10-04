@@ -3,9 +3,9 @@ import { StructuredData } from "@/components/seo";
 import "./globals.css";
 
 const siteUrl = "https://safegot.com";
-const siteTitle = "Safegot — Secure escrow for African commerce";
+const siteTitle = "Safegot — Secure checkout for African commerce";
 const siteDescription =
-  "Safegot protects social-commerce payments with escrow, delivery verification, and a clearer way to buy and sell across Nigeria and Africa.";
+  "Safegot protects social-commerce payments with secure checkout, delivery verification, and a clearer way to buy and sell across Nigeria and Africa.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Safegot secure escrow for African commerce",
+        alt: "Safegot secure checkout for African commerce",
       },
     ],
   },

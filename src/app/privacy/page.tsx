@@ -23,7 +23,7 @@ const sections: LegalSection[] = [
     title: "2. Purpose of Processing and Lawful Basis",
     paragraphs: [
       "Under the NDPA 2023, we process your personal data based on the following lawful grounds:",
-      "Performance of a Contract: To facilitate escrow transactions, deliver goods, and settle payouts.",
+      "Performance of a Contract: To facilitate protected checkout transactions, deliver goods, and settle payouts.",
       "Legal Obligation: To comply with anti-money laundering (AML) laws and financial regulatory reporting.",
       "Consent: When you opt-in to receive marketing communications or participate in specific features. Consent must be freely given, specific, informed, and unambiguous, and can be withdrawn at your discretion.",
       "Legitimate Interest: For fraud prevention, platform security, and service optimization.",
@@ -34,7 +34,7 @@ const sections: LegalSection[] = [
     paragraphs: [
       "We do not sell your personal data. We share necessary information strictly with authorized third-party service providers to deliver our core services:",
       "Dojah: We share your Identity Data with Dojah for KYC (Know Your Customer) identity verification and compliance screening.",
-      "Monnify: We share your Financial and Identity Data with Monnify to process payments, secure escrow funds, and execute automated bank payouts.",
+      "Monnify: We share your Financial and Identity Data with Monnify to process payments and execute automated bank payouts.",
       "Terminal Africa: We share your Contact Data (name, delivery address, phone number) with Terminal Africa to generate logistics quotes and facilitate order dispatch and delivery tracking.",
       "Termii: We share your phone number with Termii to deliver essential SMS notifications, including one-time passwords (OTPs) and delivery validation codes.",
     ],
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
       title="Privacy Policy"
       lastUpdated="29th September, 2026"
       intro={
-        'SAFEGOT LIMITED ("Safegot," "we," "us," or "our") is committed to protecting your personal data in accordance with the Nigeria Data Protection Act (NDPA) 2023. This Privacy Policy explains how we collect, process, share, and protect your information when you use our digital trust, escrow, and e-commerce platform.'
+        'SAFEGOT LIMITED ("Safegot," "we," "us," or "our") is committed to protecting your personal data in accordance with the Nigeria Data Protection Act (NDPA) 2023. This Privacy Policy explains how we collect, process, share, and protect your information when you use our digital trust, payment protection, and e-commerce platform.'
       }
       sections={sections}
     />

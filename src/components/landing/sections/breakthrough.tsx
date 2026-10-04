@@ -4,7 +4,7 @@ import { SectionHeading } from "../primitives/section-heading";
 const showcaseStats = [
   {
     value: "HOLD",
-    label: "Funds stay in escrow before delivery",
+    label: "Payments stay protected before delivery",
     valueClassName: "font-nunito",
     paddingClassName: "px-6",
   },
@@ -29,7 +29,7 @@ export function Breakthrough() {
         align="center"
         eyebrow="The breakthrough"
         title="Meet Safegot"
-        copy="Safegot holds payment in escrow until delivery is verified, then releases the seller’s payout. Buyers get time to inspect; sellers get confirmation before they dispatch."
+        copy="Safegot protects payment until delivery is verified, then releases the seller’s payout. Buyers get time to inspect; sellers get confirmation before they dispatch."
       />
       <div className="flex w-full items-center justify-between gap-5 max-tablet:flex-col">
         {showcaseStats.map((stat) => (

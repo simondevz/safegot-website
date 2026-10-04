@@ -1,5 +1,5 @@
 import { Button } from "../primitives/button";
-import { EscrowDashboard } from "../primitives/escrow-dashboard";
+import { PaymentProtectionDashboard } from "../primitives/payment-protection-dashboard";
 import { StatStrip, type Stat } from "../primitives/stat-strip";
 
 const stats: Stat[] = [
@@ -34,7 +34,7 @@ export function Hero() {
         <StatStrip items={stats} />
       </div>
       <div className="flex h-full w-full max-w-[500px] items-center self-stretch justify-self-end max-tablet:mx-auto max-tablet:min-h-0">
-        <EscrowDashboard />
+        <PaymentProtectionDashboard />
       </div>
     </section>
   );

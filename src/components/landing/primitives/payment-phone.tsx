@@ -1,7 +1,7 @@
 import { DecoratedCard } from "./decorated-card";
 
 const checklist = [
-  { label: "Payment secured in escrow", tone: "bg-[var(--green)]" },
+  { label: "Payment secured for checkout", tone: "bg-[var(--green)]" },
   { label: "Seller notified to ship", tone: "bg-[var(--green)]" },
   { label: "Awaiting your confirmation", tone: "bg-[var(--panel-faint)]" },
 ] as const;

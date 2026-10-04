@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Safegot secure escrow for African commerce";
+export const alt = "Safegot secure checkout for African commerce";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default function OpenGraphImage() {
           marginTop: 28,
         }}
       >
-        Secure escrow, verified delivery, safer payments.
+        Secure checkout, verified delivery, safer payments.
       </div>
     </div>,
     size,

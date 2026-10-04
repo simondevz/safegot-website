@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Safegot — Secure escrow for African commerce",
+    name: "Safegot — Secure checkout for African commerce",
     short_name: "Safegot",
-    description: "Escrow and delivery verification for clearer buying and selling across Africa.",
+    description:
+      "Secure checkout and delivery verification for clearer buying and selling across Africa.",
     start_url: "/",
     display: "standalone",
     background_color: "#f6f9fc",

@@ -1,5 +1,5 @@
 const advantages = [
-  ["Escrow-held payments", "Payments stay in escrow until the buyer confirms delivery."],
+  ["Protected payments", "Payments stay protected until the buyer confirms delivery."],
   [
     "Verified payment holds",
     "Sellers see confirmed, bank-verified funds — never a forwarded screenshot.",
