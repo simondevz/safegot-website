@@ -1,10 +1,16 @@
 const advantages = [
-  ["Protected payments", "Payments stay protected until the buyer confirms delivery."],
   [
-    "Verified payment holds",
-    "Sellers see confirmed, bank-verified funds — never a forwarded screenshot.",
+    "Delivery checks",
+    "Buyers can inspect the order and report problems before payout eligibility.",
   ],
-  ["Payout after verification", "Funds are released to the merchant after delivery is verified."],
+  [
+    "Payment confirmation",
+    "Sellers check verified payment status before dispatch, instead of relying on screenshots.",
+  ],
+  [
+    "Payout after delivery",
+    "Order payments become available after early confirmation or the inspection window ends without a dispute.",
+  ],
   [
     "Contactless handover",
     "Riders confirm delivery with a code — no cash changes hands on the route.",

@@ -85,9 +85,9 @@ export default function PrivacyPage() {
   return (
     <LegalDocument
       title="Privacy Policy"
-      lastUpdated="29th September, 2026"
+      lastUpdated="9th October, 2026"
       intro={
-        'SAFEGOT LIMITED ("Safegot," "we," "us," or "our") is committed to protecting your personal data in accordance with the Nigeria Data Protection Act (NDPA) 2023. This Privacy Policy explains how we collect, process, share, and protect your information when you use our digital trust, payment protection, and e-commerce platform.'
+        'SAFEGOT LIMITED ("Safegot," "we," "us," or "our") is committed to protecting your personal data in accordance with the Nigeria Data Protection Act (NDPA) 2023. This Privacy Policy explains how we collect, process, share, and protect your information when you use our checkout, payment confirmation, delivery verification, and e-commerce platform.'
       }
       sections={sections}
     />

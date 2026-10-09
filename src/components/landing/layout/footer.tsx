@@ -71,8 +71,8 @@ export function Footer() {
         <div className="flex h-[202px] w-[245px] flex-col gap-2.5 px-2.5 py-5 max-tablet:h-auto max-tablet:w-full max-mobile:items-start max-mobile:px-0 max-mobile:py-0">
           <Logo />
           <p className="flex h-[84px] w-[225px] items-center font-inter text-[16px] leading-[21px] font-medium text-[var(--footer-muted)] max-mobile:h-auto max-mobile:w-full">
-            Safegot protects payments until delivery is verified — the trust layer for Africa’s
-            digital commerce.
+            Payment confirmation, delivery verification, and payout after delivery checks for
+            Africa&apos;s digital commerce.
           </p>
         </div>
         <div className="flex justify-center gap-5 pt-5 max-tablet:flex-col max-tablet:items-start max-tablet:justify-start max-mobile:pt-0">

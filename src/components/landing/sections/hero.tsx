@@ -3,9 +3,9 @@ import { PaymentProtectionDashboard } from "../primitives/payment-protection-das
 import { StatStrip, type Stat } from "../primitives/stat-strip";
 
 const stats: Stat[] = [
-  { value: "HOLD", label: "Funds held before delivery" },
-  { value: "CHECK", label: "Buyer inspects before confirming" },
-  { value: "RELEASE", label: "Payout follows verification" },
+  { value: "PAY", label: "Payment confirmed before dispatch" },
+  { value: "CHECK", label: "Buyer inspects the delivery" },
+  { value: "PAYOUT", label: "Payout eligibility follows delivery checks" },
 ];
 export function Hero() {
   return (
@@ -18,9 +18,9 @@ export function Hero() {
           </span>
         </h1>
         <p className="max-w-[600px] text-[20px] leading-[28.9px] text-[var(--muted)] max-tablet:text-[18px] max-tablet:leading-7 max-mobile:text-base max-mobile:leading-6">
-          Safegot holds payment in trust until delivery is confirmed so buyers stop sending money on
-          faith, and sellers stop shipping on hope. Built for the way Africa actually sells: on
-          WhatsApp, Instagram, and Marketplace.
+          Safegot confirms buyer payments before dispatch and tracks delivery so sellers know when
+          an order is ready for payout. Built for the way Africa actually sells: on WhatsApp,
+          Instagram, and Marketplace.
         </p>
         <div className="my-[18px] flex gap-3.5 max-mobile:flex-col max-mobile:items-stretch [&>a]:max-mobile:w-full">
           <Button href="https://app.safegot.com">Try Safegot</Button>

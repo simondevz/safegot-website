@@ -5,7 +5,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What exactly is Safegot and how does it protect my transaction?",
     answer:
-      "Safegot is a secure checkout layer for social commerce. Payment is protected and released after the buyer confirms delivery.",
+      "Safegot provides checkout links, payment confirmation before dispatch, and delivery verification. The seller can withdraw the order payment after early buyer confirmation or when the inspection window ends without a dispute.",
   },
   {
     question: "Does it require a mobile app download to use?",
@@ -27,9 +27,9 @@ export const faqs: FaqItem[] = [
       "Sellers share a Safegot payment link in the same chat, DM, or marketplace listing where they already sell.",
   },
   {
-    question: "Is my money safe?",
+    question: "When can the seller withdraw the order payment?",
     answer:
-      "Your payment stays protected until the delivery step is verified, instead of being sent directly to an unknown seller.",
+      "The seller cannot withdraw the order payment before delivery checks are completed. After delivery, you can confirm early or report a problem during the inspection window. If the window ends without a dispute, the payment becomes available for withdrawal. Payout is paused while a dispute is reviewed.",
   },
 ];
 export function CommonQuestions() {
@@ -39,7 +39,7 @@ export function CommonQuestions() {
         align="center"
         eyebrow="Common questions"
         title="Frequently asked questions"
-        copy="Comparing the stress of traditional social commerce to the confidence of a Safegot-protected sale."
+        copy="Understand payment confirmation, delivery checks, and payout after delivery."
       />
       <FaqAccordion items={faqs} />
     </section>

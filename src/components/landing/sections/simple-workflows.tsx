@@ -11,11 +11,11 @@ const workflows = [
     label: "For buyers",
     role: "For buyers",
     title: "Shop with more confidence",
-    copy: "Buyers do not have to send money directly to an unfamiliar seller. When you check out through a Safegot link, your payment stays protected until you confirm the order is correct.",
+    copy: "Pay through a Safegot checkout link and inspect your order after delivery. The seller can withdraw the order payment after you confirm early or the inspection window ends without a dispute.",
     steps: [
-      "Lock your payment securely via the checkout link",
+      "Pay through the checkout link",
       "Inspect the package the moment it arrives at your door",
-      "Release funds with a verification code, only after you approve",
+      "Confirm your order early or report a problem during the inspection window",
     ],
   },
   {
@@ -23,11 +23,11 @@ const workflows = [
     label: "For sellers",
     role: "For sellers",
     title: "Ship with payment confirmation",
-    copy: "Create a payment link, share it where you sell, and only dispatch once Safegot confirms the buyer's funds are secured.",
+    copy: "Create a payment link, share it where you sell, and dispatch once Safegot confirms the buyer's payment.",
     steps: [
-      "Create a protected payment link",
-      "See verified funds before dispatch",
-      "Receive your payout after delivery",
+      "Create a payment link",
+      "Check payment confirmation before dispatch",
+      "Withdraw eligible payments after delivery checks",
     ],
   },
   {

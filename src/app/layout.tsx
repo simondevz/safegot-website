@@ -5,7 +5,7 @@ import "./globals.css";
 const siteUrl = "https://safegot.com";
 const siteTitle = "Safegot — Secure checkout for African commerce";
 const siteDescription =
-  "Safegot protects social-commerce payments with secure checkout, delivery verification, and a clearer way to buy and sell across Nigeria and Africa.";
+  "Safegot provides checkout links, payment confirmation, delivery verification, and payout after delivery checks for commerce across Nigeria and Africa.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

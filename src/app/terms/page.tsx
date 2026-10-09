@@ -11,10 +11,10 @@ const sections: LegalSection[] = [
   {
     title: "1. Description of Service",
     paragraphs: [
-      "Safegot provides software development, IT services, and a digital trust infrastructure tailored for social commerce and e-commerce. We specialize in digital order management, secure payment holds, delivery confirmation systems, and automated enterprise software solutions.",
-      "Our core service acts as a secure intermediary for online transactions:",
-      "For Buyers: We coordinate a secure payment hold until you receive and verify your order.",
-      "For Sellers: We provide real-time, verified deposit confirmations before you dispatch goods, eliminating the risk of fake bank alerts and upfront payment fraud.",
+      "Safegot provides software development, IT services, and tools for social commerce and e-commerce. We specialize in digital order management, payment confirmation, delivery verification, and automated enterprise software solutions.",
+      "Our core service helps buyers and sellers manage payment and delivery steps:",
+      "For Buyers: We provide checkout links, order tracking, delivery verification, and a window to inspect your order before the seller can withdraw the order payment.",
+      "For Sellers: We provide verified payment confirmations before you dispatch goods, so you can check payment status instead of relying on a buyer's bank alert.",
       "For Logistics/Riders: We offer a digital, contactless handover portal that uses one-time validation codes to confirm delivery, eliminating the need to carry physical cash.",
       "Safegot is a technology service provider, not a retail merchant, logistics provider, or financial institution. We do not sell the goods transacted on the platform.",
     ],
@@ -24,39 +24,39 @@ const sections: LegalSection[] = [
     paragraphs: [
       "To use Safegot, you must create an account. You are responsible for maintaining the confidentiality of your account credentials. The Platform supports three primary user roles:",
       "Buyers: Individuals purchasing goods or services via Safegot’s secure checkout links.",
-      "Sellers/Merchants: Businesses or individuals using Safegot to generate payment links, manage order tracking, and receive automated payouts.",
+      "Sellers/Merchants: Businesses or individuals using Safegot to generate payment links, manage order tracking, and withdraw eligible order payments.",
       "Logistics/Riders: Couriers who utilize the Safegot Rider Portal to verify deliveries via code exchange and log handovers digitally.",
       "You agree to provide accurate, current, and complete information during registration. Safegot reserves the right to suspend or terminate accounts that provide false information, engage in fraudulent activity, or violate these Terms.",
     ],
   },
   {
-    title: "3. The Safegot Payment Protection Process",
+    title: "3. Payment Confirmation, Delivery, and Payout",
     paragraphs: [
-      "All transactions processed through Safegot follow a strict, automated sequence to ensure maximum security for all parties:",
+      "Transactions processed through Safegot follow these payment and delivery steps:",
       "Payment Initiation: The Seller generates a custom payment link and shares it with the Buyer.",
-      "Secure Hold: The Buyer completes the payment through the Safegot portal. The payment remains protected while the order is prepared for delivery.",
-      "Dispatch Notification: Safegot instantly notifies the Seller that the deposit is secured, prompting the dispatch of the order.",
+      "Payment Confirmation: The Buyer pays through the checkout link. Safegot verifies payment with the payment provider before marking the order as paid. The Seller cannot withdraw the order payment while the order is awaiting delivery checks.",
+      "Dispatch: The Seller checks payment confirmation in Safegot before dispatching the order.",
       "Delivery and Verification: Upon arrival, the Buyer inspects the package. Confirmation works in two ways, depending on the delivery method:",
       "Local riders: If the order is correct and satisfactory, the buyer gives their unique, single-use validation code to the rider or enters it into the Safegot portal.",
-      "Integrated logistics: Safegot is fully responsible for the delivery process through our logistics partner. Delivery is confirmed within the Safegot platform, and the buyer still inspects the order before the transaction is completed.",
-      "Automated Payout: Once delivery is confirmed, the transaction is marked complete and the funds are instantly released and settled to the seller’s bank account. Confirmation happens in one of two ways:",
-      "Local riders: The buyer’s validation code is successfully entered into the Safegot portal, either by the buyer or by the rider.",
-      "Integrated logistics: Delivery is confirmed through the Safegot platform, and the payout is triggered automatically.",
+      "Integrated logistics: Delivery is recorded through the Safegot platform and logistics partner. The Buyer can inspect the order before completion.",
+      "Inspection Window: Delivery verification starts the inspection window. The Buyer can confirm the order early or raise a dispute before the window ends. A delivery code verifies handover; it does not itself settle a bank payout.",
+      "Payment Availability: The order payment becomes available in the Seller's balance when the Buyer confirms early or the inspection window ends without a dispute. Payout is paused while a dispute is reviewed, as described in section 4.",
+      "Bank Payout: The Seller requests a withdrawal from their available balance to their registered bank account. Bank settlement depends on payment-provider and bank processing and is not instant or triggered solely by delivery-code validation.",
     ],
   },
   {
     title: "4. Disputes, Returns, and Refunds",
     paragraphs: [
       "If a Buyer is unsatisfied with an order upon delivery (e.g., wrong item, damaged goods), they must not provide the validation code to the rider.",
-      "Raising a Dispute: The Buyer or Seller must flag the transaction as disputed within the platform. The payment remains protected until the dispute is resolved.",
-      "Resolution: Buyers and Sellers are encouraged to resolve disputes directly. If an agreement cannot be reached (e.g., return of the item to the seller), Safegot’s dispute resolution team will review evidence (dispatch proof, communication, rider logs) to determine whether to refund the Buyer or release funds to the Seller.",
+      "Raising a Dispute: Report a problem within the platform during the inspection window, before the order payment becomes available to the Seller. Payout is paused while the dispute is reviewed.",
+      "Resolution: Buyers and Sellers are encouraged to resolve disputes directly. If an agreement cannot be reached (e.g., return of the item to the seller), Safegot's dispute resolution team reviews evidence (dispatch proof, communication, rider logs) and decides whether to approve a refund to the Buyer or make the order payment available in the Seller's balance for withdrawal.",
       "Refund Policy: Approved refunds will be processed back to the Buyer's original payment method within standard banking timelines. Platform processing fees and dispatch fees are non-refundable.",
     ],
   },
   {
     title: "5. Fees and Payouts",
     paragraphs: [
-      "Sellers: Payouts are settled automatically to the registered bank account upon successful code validation. Sellers are responsible for ensuring their bank details are accurate.",
+      "Sellers: Eligible order payments become available for withdrawal after the delivery and inspection steps described in section 3, or after a dispute is resolved in the Seller's favor. Sellers request withdrawals to their registered bank account and are responsible for ensuring their bank details are accurate. Bank-transfer timing depends on payment-provider and bank processing.",
       "Platform Fees: Safegot charges a clearly displayed service fee per transaction. By proceeding with a transaction, you agree to the applicable fees shown at checkout.",
     ],
   },
@@ -66,13 +66,13 @@ const sections: LegalSection[] = [
       "You agree not to use Safegot to:",
       "Facilitate transactions for illegal goods, weapons, illicit drugs, counterfeit items, or adult content.",
       "Engage in money laundering, fraudulent schemes, or any activity that violates Nigerian law.",
-      "Attempt to bypass, hack, or manipulate the payment protection system, validation code mechanics, or user portals.",
+      "Attempt to bypass, hack, or manipulate payment confirmation, validation code mechanics, or user portals.",
     ],
   },
   {
     title: "7. Limitation of Liability",
     paragraphs: [
-      "To the maximum extent permitted by law, Safegot Limited shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly. Our platform bridges the trust gap by securing payments, but we do not guarantee the quality, safety, or legality of the physical items sold by third-party merchants. And it is not liable for delay, loss or damage caused by logistics providers, banks, or payment processors, except as provided under section 4. Nothing in these Terms excludes or limits liability for fraud, gross negligence, wilful misconduct, or any liability that cannot be excluded under applicable law.",
+      "To the maximum extent permitted by law, Safegot Limited shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly. Our platform provides payment confirmation and delivery verification, but we do not guarantee the quality, safety, or legality of the physical items sold by third-party merchants. And it is not liable for delay, loss or damage caused by logistics providers, banks, or payment processors, except as provided under section 4. Nothing in these Terms excludes or limits liability for fraud, gross negligence, wilful misconduct, or any liability that cannot be excluded under applicable law.",
     ],
   },
   {
@@ -141,7 +141,7 @@ export default function TermsPage() {
   return (
     <LegalDocument
       title="Terms and Conditions"
-      lastUpdated="29th September, 2026"
+      lastUpdated="9th October, 2026"
       intro={
         'Welcome to Safegot. These Terms and Conditions ("Terms") govern your access to and use of the Safegot website (www.safegot.com), our mobile applications, software APIs, and any related services (collectively, the "Platform"). The Platform is owned and operated by SAFEGOT LIMITED ("Safegot," "we," "us," or "our"), a private company limited by shares registered under the Companies and Allied Matters Act, 2020 of the Federal Republic of Nigeria (RC Number: 9769439). Our registered office is located at No. 24, Bamidele Avi Street, Egbeda, Lagos State, Nigeria. By creating an account, generating a payment link, or otherwise using the Safegot platform, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use our services.'
       }

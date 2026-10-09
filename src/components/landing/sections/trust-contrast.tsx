@@ -7,7 +7,7 @@ export function TrustContrast() {
         align="center"
         eyebrow="Trust contrast"
         title="The Safegot trust advantage"
-        copy="See how payment protection, payment confirmation, and delivery verification create a clearer process for every side of a sale."
+        copy="See how payment confirmation, delivery verification, and payout after delivery checks create a clearer process for every side of a sale."
       />
       <div className="flex justify-between gap-[18px] max-tablet:flex-col">
         <ComparisonColumn />

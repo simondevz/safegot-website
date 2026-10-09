@@ -5,14 +5,14 @@ export function PaymentProtectionDashboard() {
     <div className="mx-auto aspect-[500/418] w-full max-w-[500px] py-[40px] my-auto">
       <Image
         className="block h-auto w-full dark:hidden"
-        src="/landing/escrow-card-light.svg"
-        alt="Safegot payment protection dashboard showing a secured payment and transaction statuses"
+        src="/landing/payment-confirmation-card-light.svg"
+        alt="Safegot dashboard showing payment confirmation and order statuses"
         width={500}
         height={418}
       />
       <Image
         className="hidden h-auto w-full dark:block"
-        src="/landing/escrow-card-dark.svg"
+        src="/landing/payment-confirmation-card-dark.svg"
         alt=""
         aria-hidden="true"
         width={500}

@@ -76,7 +76,7 @@ export function CommunityVoices() {
         align="center"
         eyebrow="Community voices"
         title="A clearer way to transact online"
-        copy="Safegot is designed around the real handoffs between buyers, sellers, and riders — with payment protection built into the process."
+        copy="Safegot is designed around the handoffs between buyers, sellers, and riders, with payment confirmation and delivery checks built into the process."
       />
       <div aria-label="Testimonials carousel" aria-roledescription="carousel" role="region">
         <DecoratedCard className="flex min-h-[297px] w-full flex-col items-center justify-center gap-[10px] rounded-[14px] px-6 py-8">

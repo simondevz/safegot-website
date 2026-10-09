@@ -3,20 +3,20 @@ import { SectionHeading } from "../primitives/section-heading";
 
 const showcaseStats = [
   {
-    value: "HOLD",
-    label: "Payments stay protected before delivery",
+    value: "PAY",
+    label: "Payment confirmed before dispatch",
     valueClassName: "font-nunito",
     paddingClassName: "px-6",
   },
   {
     value: "CHECK",
-    label: "Buyer inspects before confirming",
+    label: "Buyer inspects the delivery",
     valueClassName: "font-nunito",
     paddingClassName: "px-[26px]",
   },
   {
-    value: "RELEASE",
-    label: "Payout follows delivery verification",
+    value: "PAYOUT",
+    label: "Payout eligibility follows delivery checks",
     valueClassName: "font-nunito",
     paddingClassName: "px-[26px]",
   },
@@ -29,7 +29,7 @@ export function Breakthrough() {
         align="center"
         eyebrow="The breakthrough"
         title="Meet Safegot"
-        copy="Safegot protects payment until delivery is verified, then releases the seller’s payout. Buyers get time to inspect; sellers get confirmation before they dispatch."
+        copy="Safegot confirms payments before dispatch and verifies delivery. Buyers get an inspection window; sellers can withdraw eligible payments after early confirmation or when the window ends without a dispute."
       />
       <div className="flex w-full items-center justify-between gap-5 max-tablet:flex-col">
         {showcaseStats.map((stat) => (
@@ -42,7 +42,7 @@ export function Breakthrough() {
             >
               {stat.value}
             </span>
-            <span className="flex h-[22px] w-full items-center font-inter text-[16px] leading-[22px] font-normal text-[var(--muted)]">
+            <span className="flex min-h-[22px] w-full items-center font-inter text-[16px] leading-[22px] font-normal text-[var(--muted)]">
               {stat.label}
             </span>
           </DecoratedCard>
